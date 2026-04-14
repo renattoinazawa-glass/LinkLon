@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkLon</title>
+    <link rel="icon" href="images/favicon2.png" type="image/png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Plus+Jakarta+Sans:wght@400;800&family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #030305;
+            color: #ffffff;
+        }
+
+        /* Neon Glow Utility */
+        .neon-text {
+            text-shadow: 0 0 20px rgba(0, 230, 0, 0.4);
+        }
+
+        /* Glassmorphism Utility */
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-green-500 selection:text-black">
+
+<nav class="fixed top-0 w-full z-50 px-6 py-6 flex justify-between items-center glass">
+    <div class="flex items-center">
+        <a href="index.html" class="text-white font-bold text-xl transition">LinkLon</a>
+    </div>
+
+    <div class="hidden md:flex gap-8 text-sm font-medium text-gray-400">
+        <a href="Politicas.html" class="hover:text-white transition">Política</a>
+        <a href="termos.html" class="hover:text-white transition">Termos de uso</a>
+        <a href="#contato" class="hover:text-white transition">Contato</a>
+    </div>
+
+    <button id="menu-btn" class="md:hidden text-gray-400 hover:text-white focus:outline-none">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+    </button>
+
+    <div id="mobile-menu" class="hidden fixed inset-0 z-[9999] w-screen h-screen bg-[#030305]">
+    
+    <button id="close-btn" class="absolute top-8 right-8 text-white z-[10000] p-2">
+        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+    </button>
+    
+    <div class="flex flex-col items-center justify-center w-full h-full px-6">
+        <nav class="flex flex-col items-center gap-12 w-full">
+            <a href="Politicas.html" class="mobile-link text-3xl font-bold text-white uppercase tracking-widest whitespace-nowrap">
+                Política
+            </a>
+            <a href="termos.html" class="mobile-link text-3xl font-bold text-white uppercase tracking-widest whitespace-nowrap">
+                Termos
+            </a>
+            <a href="#contato" class="mobile-link text-3xl font-bold text-white uppercase tracking-widest whitespace-nowrap">
+                Contato
+            </a>
+        </nav>
+    </div>
+</div>
+</nav>
+<script>
+    const menuBtn = document.getElementById('menu-btn');
+    const closeBtn = document.getElementById('close-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    // Abre o menu
+    menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.remove('hidden');
+        menuBtn.classList.add('hidden'); // Esconde o ícone de hambúrguer
+    });
+
+    // Fecha o menu
+    closeBtn.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuBtn.classList.remove('hidden'); // Traz o ícone de hambúrguer de volta
+    });
+
+    // Fecha o menu ao clicar nos links
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            menuBtn.classList.remove('hidden'); // Traz o ícone de hambúrguer de volta
+        });
+    });
+</script>
+
+
+
+<main>
+
+<section class="relative min-h-screen flex items-center justify-center bg-[#030305] overflow-hidden px-6 py-20">
+  
+  <div class="absolute inset-0 z-0">
+    <img 
+      src="images/LP image.png" 
+      alt="AI Analysis HUD" 
+      class="w-full h-full object-cover object-center opacity-10 mix-blend-lighten item-start-center"
+    />
+    <div class="absolute inset-0 bg-radial-gradient from-transparent via-[#030305]/60 to-[#030305]"></div>
+  </div>
+
+  <div class="container mx-auto relative z-10 flex flex-col items-center text-center animate-float">
+    <!-- Text variation 2 -->
+    <div class="max-w-7xl">
+      <h1 class="text-3xl md:text-6xl font-extrabold text-white leading-[1.1] mb-8 tracking-tight">
+      Transforme cliques em clientes com<br> <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500"><strong class="font-bold">tráfego pago</strong></span> otimizado por 
+        IA
+      </h1>
+      <!-- Texto 2
+        <div class="max-w-4xl">
+      <h1 class="text-5xl md:text-7xl font-extrabold text-white leading-[1.1] mb-8 tracking-tight">
+      Transforme cliques em clientes com <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500"><strong class="font-bold">tráfego pago</strong></span> otimizado por 
+        IA
+      </h1> -->
+
+
+      <p class="text-gray-400 text-lg md:text-1xl mb-12 leading-relaxed max-w-2xl mx-auto">
+        A LinkLon analisa, testa e escala campanhas com inteligência artificial para maximizar seus resultados rapidamente.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+        <a href="https://wa.me/5543996491155" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto">
+          <button class="w-full sm:w-auto bg-[#1100ff] hover:bg-blue-600 text-white font-bold py-4 px-12 rounded-xl transition-all shadow-[0_0_30px_rgba(26,33,255,0.4)] hover:scale-105 active:scale-95">
+            Entrar em contato agora
+          </button>
+        </a>
+        <a href="#works">
+        <button class="w-full sm:w-auto border border-blue-900/50 bg-blue-950/10 hover:bg-blue-900/20 text-white font-semibold py-4 px-12 rounded-xl transition-all hover:scale-105">
+          Ver como funciona
+        </button>
+        </a>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+<style>
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0px); }
+  }
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+</style>
+
+
+<section id="works" class="py-20 px-6 bg-gradient-to-r from-[#030305] to-[#070C13] overflow-hidden">
+  <div class="max-w-7xl mx-auto">
+    
+    <h2 class="text-center text-4xl font-extrabold text-white mb-16">
+      Como <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500">funciona</span>
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 relative">
+      
+      <div class="step-card group">
+        <div class="step-number">1</div>
+        <h3 class="step-title text-base lg:text-lg">Diagnóstico Estratégico</h3>
+        <p class="step-desc text-xs lg:text-sm">
+          Analisamos seu negócio e público para traçar o plano ideal.
+        </p>
+      </div>
+
+      <div class="step-card group">
+        <div class="step-number">2</div>
+        <h3 class="step-title text-base lg:text-lg">Mapeamento com IA</h3>
+        <p class="step-desc text-xs lg:text-sm">
+          Identificamos canais com maior potencial de retorno real.
+        </p>
+      </div>
+
+      <div class="step-card group">
+        <div class="step-number">3</div>
+        <h3 class="step-title text-base lg:text-lg">Testes de Performance</h3>
+        <p class="step-desc text-xs lg:text-sm">
+          Rodamos testes para encontrar o que converte.
+        </p>
+      </div>
+
+      <div class="step-card group">
+        <div class="step-number">4</div>
+        <h3 class="step-title text-base lg:text-lg">Escala e Otimização</h3>
+        <p class="step-desc text-xs lg:text-sm">
+          Escalamos os resultados com base em dados concretos.
+        </p>
+      </div>
+
+    </div>
+  </div>
+<style type="text/tailwindcss">
+
+  @layer components {
+    .cta-button-container {
+      /* w-full for mobile, w-[28%] for desktop to hit that 25-30% sweet spot */
+      @apply w-full lg:w-[28%] bg-[#1a21ff] text-white font-bold py-3.5 rounded-lg 
+             transition-all duration-300 relative overflow-hidden text-sm
+             hover:bg-blue-600 hover:scale-[1.02] active:scale-[0.98]
+             shadow-[0_0_20px_rgba(26,33,255,0.3)]
+             hover:shadow-[0_0_30px_rgba(26,33,255,0.45)];
+        
+    }
+
+    /* Subtle white shine animation remains same */
+    .cta-button-container::before {
+      content: '';
+      @apply absolute top-0 -left-full w-full h-full 
+             bg-gradient-to-r from-transparent via-white/10 to-transparent 
+             transition-all duration-700 group-hover:left-full;
+    }
+ 
+  }
+</style>
+   <a href="https://wa.me/5543996491155" target="blank" rel="noopener noreferrer">
+<div class="flex justify-center w-full mt-10">
+  <button type="submit" class="cta-button-container group">
+    <div class="flex items-center justify-center gap-3">
+      <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+      <span class="whitespace-nowrap">Entre em contato agora</span>
+    </div>
+  </button>
+</div>
+</button>
+</a>
+
+
+</section>
+<style type="text/tailwindcss">
+  @layer components {
+    .step-card {
+      /* Reduced p-8 to p-5 to make it "smaller" and "wider" */
+      @apply relative p-5 rounded-xl border border-white/5 bg-white/[0.01] 
+             text-center transition-all duration-300 hover:bg-white/[0.04] 
+             hover:border-blue-500/20 h-full flex flex-col items-center justify-start;
+    }
+
+    .step-number {
+      @apply w-10 h-10 rounded-full bg-blue-700 text-white font-bold 
+             flex items-center justify-center mb-4 relative z-10
+             shadow-[0_0_15px_rgba(29,78,216,0.3)] text-sm;
+    }
+
+    .step-title {
+      @font-bold text-white mb-2 leading-tight;
+    }
+
+    .step-desc {
+      @apply text-gray-500 leading-relaxed;
+    }
+
+} 
+
+
+  
+</style>
+
+<!-- <section class="py-24 px-6 bg-gradient-to-r from-[#030305] to-[#121212]"> Gradient -->
+  <section class="py-24 px-6">
+    <style type="text/tailwindcss">
+  @layer components {
+    .feature-card {
+      @apply bg-white/[0.02] border border-white/5 rounded-2xl p-8 
+             flex flex-col items-start transition-all duration-300
+             hover:bg-white/[0.04] hover:border-blue-500/20;
+    }
+
+    .icon-box {
+      @apply w-10 h-10 rounded-lg bg-[#1100ff]/20 border border-[#1100ff]/30 
+       flex items-center justify-center text-[#1100ff] mb-6;
+    }
+
+    .feature-title {
+      @apply text-white font-bold text-lg mb-3;
+    }
+
+    .feature-desc {
+      @apply text-gray-500 text-sm leading-relaxed;
+    }
+  }
+</style>
+  <div class="max-w-7xl mx-auto">
+    
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4">
+        Por que sua empresa <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500">precisa</span> de <br>uma agência especializada ?
+      </h2>
+      <p class="text-gray-500 text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
+        Anunciar sem estratégia é como navegar sem um mapa.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+      
+      <div class="feature-card">
+        <div class="icon-box">
+      <svg 
+  xmlns="http://www.w3.org/2000/svg" 
+  fill="none" 
+  viewBox="0 0 24 24" 
+  stroke-width="2" 
+  stroke="currentColor" 
+  class="w-6 h-6"
+>
+  <path 
+    stroke-linecap="round" 
+    stroke-linejoin="round" 
+    d="M12 1v22m5-18H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H7" 
+  />
+</svg>
+        </div>
+        <h3 class="feature-title">Eficiência no Investimento</h3>
+        <p class="feature-desc">Transformamos cada centavo em investimento estratégico, garantindo que seu orçamento seja direcionado para o que realmente gera retorno.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="icon-box">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+        </div>
+        <h3 class="feature-title">Decisões Baseadas em Dados</h3>
+        <p class="feature-desc">Substituímos a intuição por análises precisas, acompanhando métricas em tempo real para otimizar a performance do seu negócio.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="icon-box">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+        </div>
+        <h3 class="feature-title">Testes e Evolução Contínua</h3>
+        <p class="feature-desc">Aplicamos testes estruturados para descobrir os melhores caminhos, validando o que mais conecta com o seu público e mercado.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="icon-box">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.989-2.386l-.548-.547z"/></svg>
+        </div>
+        <h3 class="feature-title">Vantagem da IA</h3>
+        <p class="feature-desc">Com inteligência artificial, identificamos padrões que humanos sozinhos não enxergam.</p>
+      </div>
+
+    </div>
+
+    <p class="text-center text-white font-medium text-lg tracking-tight">
+      Na LinkLon, decisões são guiadas por <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600 font-bold">dados</span>, não achismos.
+    </p>
+
+  </div>
+
+
+<!-- CTA MAIN -->
+
+
+</section>
+
+  <!-- <section class="py-24 px-6 bg-[#030305]"> -->
+ <section class="py-24 px-6 bg-gradient-to-r from-[#030305] to-[#070C13]">
+    <style type="text/tailwindcss">
+  @layer components {
+    .faq-item {
+      @apply bg-white/[0.02] border border-white/5 rounded-2xl overflow-hidden
+             transition-all duration-300;
+    }
+
+    /* Highlight border when open */
+    .faq-item[open] {
+      @apply border-blue-500/30 bg-white/[0.04];
+    }
+
+    .faq-question {
+      @apply flex justify-between items-center p-6 cursor-pointer 
+             text-white font-bold text-base md:text-lg list-none;
+    }
+
+    /* Remove default arrow in Chrome/Safari */
+    .faq-question::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-icon {
+      @apply text-gray-500 group-open:text-blue-500 transition-colors;
+    }
+
+    .faq-answer {
+      @apply px-6 pb-6 text-gray-400 text-sm md:text-base leading-relaxed;
+    }
+  }
+</style>
+  <div class="max-w-3xl mx-auto">
+    
+    <h2 class="text-center text-4xl font-extrabold text-white mb-16 ">
+      Perguntas <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500">frequentes</span>
+    </h2>
+    <div class="space-y-4">
+      
+      <details class="faq-item group">
+        <summary class="faq-question">
+          <strong>Onde meus anúncios serão veiculados?</strong>
+          <span class="faq-icon">
+            <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </span>
+        </summary>
+        <div class="faq-answer">
+          Somos especialistas em Meta Ads e operamos com alta performance em Google Ads, cobrindo os principais canais de conversão do mercado.
+        </div>
+      </details>
+
+    <div class="space-y-4">
+      
+      <details class="faq-item group">
+        <summary class="faq-question">
+          <strong>Quanto tempo leva para ver resultados?</strong>
+          <span class="faq-icon">
+            <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </span>
+        </summary>
+        <div class="faq-answer">
+          Os primeiros indicadores de desempenho surgem nos primeiros 7 a 14 dias. Em média, nossos clientes começam a sentir impacto significativo nas vendas a partir do segundo mês de operação, conforme os dados alimentam a otimização contínua.
+        </div>
+      </details>
+</div> <!-- Div suspeito -->
+      <details class="faq-item group">
+        <summary class="faq-question">
+          Vocês trabalham com qualquer tipo de negócio?
+          <span class="faq-icon">
+            <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </span>
+        </summary>
+        <div class="faq-answer">
+          Com certeza. Atendemos desde negócios locais até e-commerces e empresas de serviços. O que fazemos é um diagnóstico inicial para entender o seu momento e aplicar a estratégia de IA e anúncios que mais faz sentido para o seu orçamento e objetivo atual.
+        </div>
+      </details>
+
+      <details class="faq-item group">
+        <summary class="faq-question">
+          Como funciona o processo de otimização com IA?
+          <span class="faq-icon">
+            <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </span>
+        </summary>
+        <div class="faq-answer">
+         Nossa inteligência artificial atua na análise profunda de grandes volumes de dados em tempo real. Ela identifica padrões de comportamento e oportunidades no leilão para que nossos especialistas tomem as decisões finais com máxima precisão. Isso une a velocidade da tecnologia com o olhar estratégico humano para garantir o menor custo por aquisição para sua empresa.
+        </div>
+      </details>
+
+    </div>
+  </div>
+
+<style type="text/tailwindcss">
+
+  @layer components {
+    .cta-button-container {
+      /* w-full for mobile, w-[28%] for desktop to hit that 25-30% sweet spot */
+      @apply w-full lg:w-[28%] bg-[#1a21ff] text-white font-bold py-3.5 rounded-lg 
+             transition-all duration-300 relative overflow-hidden text-sm
+             hover:bg-blue-600 hover:scale-[1.02] active:scale-[0.98]
+             shadow-[0_0_20px_rgba(26,33,255,0.3)]
+             hover:shadow-[0_0_30px_rgba(26,33,255,0.45)];
+        
+    }
+
+    /* Subtle white shine animation remains same */
+    .cta-button-container::before {
+      content: '';
+      @apply absolute top-0 -left-full w-full h-full 
+             bg-gradient-to-r from-transparent via-white/10 to-transparent 
+             transition-all duration-700 group-hover:left-full;
+    }
+  }
+</style>
+
+  <a href="https://wa.me/5543996491155" target="blank" rel="noopener noreferrer">
+<div class="flex justify-center w-full mt-10">
+  
+  <button type="submit" class="cta-button-container group">
+    <div class="flex items-center justify-center gap-3">
+      <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+      <span class="whitespace-nowrap">Entre em contato agora</span>
+    </div>
+  </button>
+</div>
+</button>
+</a>
+
+
+ </section>
+<section id="contato" mt-16 class="py-24 px-6 bg-[#030305] relative overflow-hidden">
+    <style type="text/tailwindcss">
+  @layer components {
+    .form-label {
+      @apply block text-xs font-bold text-white mb-2 ml-1 uppercase tracking-wider;
+    }
+
+    .form-input {
+      @apply w-full bg-white/[0.02] border border-white/10 rounded-lg px-4 py-3 
+             text-white placeholder:text-gray-600 focus:outline-none 
+             focus:border-blue-500/50 focus:bg-white/[0.04] transition-all;
+    }
+  }
+
+  @layer components {
+    /* ... existing input styles ... */
+
+    .form-checkbox {
+      @apply appearance-none w-5 h-5 bg-white/[0.02] border border-white/10 rounded 
+             cursor-pointer transition-all flex-shrink-0 relative
+             checked:bg-[#1a21ff] checked:border-[#1a21ff]
+             focus:ring-2 focus:ring-blue-500/20 focus:outline-none;
+    }
+
+    /* Custom checkmark (the "tick") */
+    .form-checkbox:checked::after {
+      content: '';
+      @apply absolute left-[6px] top-[2px] w-[6px] h-[10px] 
+             border-r-2 border-b-2 border-white rotate-45;
+    }
+  }
+</style>
+
+  
+  <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-blue-600/5 rounded-full blur-[120px] pointer-events-none"></div>
+
+  <div class="max-w-xl mx-auto relative z-10">
+    
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-extrabold text-white mb-4">
+        Vamos <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500">conversar</span>?
+      </h2>
+      <p class="text-gray-300 text-sm leading-relaxed">
+        Entre em contato conosco para agendarmos uma reunião e entender exatamente o que o seu negócio precisa para vender mais.
+      </p>
+    </div>
+<!-- 
+    <form id="contactForm" class="space-y-5">
+      
+      <div>
+        <label for="name" class="form-label">Nome</label>
+        <input type="text" id="name" name="name" placeholder="Seu nome completo" class="form-input" required>
+      </div>
+
+      <div>
+        <label for="email" class="form-label">Email</label>
+        <input type="email" id="email" name="email" placeholder="seu@email.com" class="form-input" required>
+      </div>
+
+      <div>
+        <label for="whatsapp" class="form-label">WhatsApp</label>
+        <input type="tel" id="whatsapp" name="whatsapp" placeholder="(00) 00000-0000" class="form-input" required>
+      </div>
+
+      <div>
+        <label for="company" class="form-label">Nome da empresa <span class="text-gray-600 font-normal">(opcional)</span></label>
+        <input type="text" id="company" name="company" placeholder="Sua empresa" class="form-input">
+      </div>
+
+<div class="space-y-4 pt-2">
+  
+  <div class="flex items-start gap-3 group">
+    <div class="relative flex items-center">
+      <input type="checkbox" id="privacy" name="privacy" class="form-checkbox" required>
+    </div>
+    <label for="privacy" class="text-[11px] md:text-xs text-gray-500 leading-snug cursor-pointer group-hover:text-gray-400 transition-colors">
+      Concordo com as <a href="https://xx" class="text-blue-500 hover:underline">políticas de privacidade</a> e <a href="https://xx" class="text-blue-500 hover:underline">termos de uso</a>
+    </label>
+  </div>
+
+  <div class="flex items-start gap-3 group">
+    <div class="relative flex items-center">
+      <input type="checkbox" id="whatsapp_consent" name="whatsapp_consent" class="form-checkbox">
+    </div>
+    <label for="whatsapp_consent" class="text-[11px] md:text-xs text-gray-500 leading-snug cursor-pointer group-hover:text-gray-400 transition-colors">
+      Permito que a LinkLon me envie mensagem pelo WhatsApp
+    </label>
+  </div>
+
+</div>
+
+
+<a href="https://www.wa.me/5543996491155 rel ="noopener noreferrer" target="blank">
+      <button type="submit" class="w-full bg-[#1a21ff] hover:bg-blue-600 text-white font-bold py-4 rounded-lg transition-all shadow-[0_0_25px_rgba(26,33,255,0.4)] mt-4">
+        Entrar em contato agora
+      </button>
+    </a>
+      </form>
+
+    <div class="mt-16 pt-8 border-t border-white/5 text-center">
+      
+
+      <div class=" m-16 flex flex-wrap justify-center gap-x-8 gap-y-4 text-xs font-semibold text-gray-500 uppercase tracking-widest">
+        <a href="mailto:contato@linklon.com.br" class="flex items-center gap-2 hover:text-blue-500 transition">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          agencialinklon@gmail.com
+        </a>
+        <a href="#" class="flex items-center gap-2 hover:text-blue-500 transition">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          +55 (43) 9 9649-1155
+        </a>
+        <span class="flex items-center gap-2">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Londrina, Paraná Brasil
+        </span>
+      </div>
+    </div>
+
+  </div>
+</section> 
+-->
+<!-- Contatos ( apenas icones )--> 
+
+<!-- </section> -->
+<!-- <section class="py-10 px-16 bg-gradient-to-t from-[#030305] to-[#070C13]"> -->
+</div>
+<div class=" mt-24 flex flex-wrap justify-center gap-x-56 gap-y-4 text-sm font-semibold text-gray-200 uppercase tracking-widest">
+        
+  <a href="mailto:agencialinklon@gmail.com" class="flex items-center gap-4 hover:text-blue-500 transition">
+          <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          agencialinklon@gmail.com
+        </a>
+        <a href="https://www.wa.me/5543996491155" rel ="noopener noreferrer" target="blank" class="flex items-center gap-2 hover:text-blue-500 transition">
+          <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          +55 (43) 9 9649-1155
+        </a>
+        <span class="flex items-center gap-2">
+          <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Londrina, Paraná Brasil
+        </span>
+      </div>
+</section>
+  <!--
+</section> -->
+
+<div id="cookie-banner" class="fixed bottom-0 left-0 w-full bg-black text-white p-4 flex flex-col md:flex-row justify-between items-center z-[9999] hidden">
+  <p class="text-sm max-w-[70%]">
+    Utilizamos apenas cookies essenciais para o funcionamento do website.
+  </p>
+
+  <div class="flex gap-2 mt-2 md:mt-0">
+    <button id="accept-cookies" class="bg-green-500 px-4 py-2 rounded text-black font-bold">
+      Aceitar
+    </button>
+    <button id="reject-cookies" class="bg-red-500 px-4 py-2 rounded text-white font-bold">
+      Recusar
+    </button>
+  </div>
+</div>
+<div id="cookie-banner" class="hidden">
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const banner = document.getElementById("cookie-banner");
+  const acceptBtn = document.getElementById("accept-cookies");
+  const rejectBtn = document.getElementById("reject-cookies");
+
+  if (!banner || !acceptBtn || !rejectBtn) return;
+
+  function loadTracking() {
+   // Google Analytics - retirar o comentário depois ( /* quando implementar o meta e o google analytics)
+    
+   /* const gaScript = document.createElement("script");
+    gaScript.src = "https://www.googletagmanager.com/gtag/js?id=SEU_GA_ID";
+    gaScript.async = true;
+    document.head.appendChild(gaScript);
+
+    const gaConfig = document.createElement("script");
+    gaConfig.innerHTML = `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'SEU_GA_ID', { anonymize_ip: true });
+    `;
+    document.head.appendChild(gaConfig);
+
+    // Meta Pixel
+    const metaScript = document.createElement("script");
+    metaScript.innerHTML = `
+      !function(f,b,e,v,n,t,s){
+        if(f.fbq)return;n=f.fbq=function(){
+        n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;
+        n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s);
+      }(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+
+      fbq('init', 'SEU_PIXEL_ID');
+      fbq('track', 'PageView');
+    `;
+    document.head.appendChild(metaScript);
+    */
+  }
+
+  const consent = localStorage.getItem("cookie_consent");
+
+  if (!consent) {
+    banner.classList.remove("hidden");
+  } else if (consent === "accepted") {
+    loadTracking();
+  }
+
+  acceptBtn.onclick = () => {
+    localStorage.setItem("cookie_consent", "accepted");
+    loadTracking();
+    banner.classList.add("opacity-0");
+    setTimeout(() => {
+      banner.style.display = "none";
+    }, 300);
+  };
+
+  rejectBtn.onclick = () => {
+    localStorage.setItem("cookie_consent", "rejected");
+    banner.classList.add("opacity-0");
+    setTimeout(() => {
+      banner.style.display = "none";
+    }, 300);
+  };
+});
+</script>
+</div>
+    
+        </main>
+
+    <footer class="py-10 text-center text-gray-600 text-sm border-t border-white/5">
+
+    <nav class="mb-4 flex justify-center gap-6 text-gray-500">
+        <a href="Politicas.html" class="hover:text-white transition">Política de Privacidade</a>
+        <a href="termos.html" class="hover:text-white transition">Termos de Uso</a>
+    </nav>
+
+    <p>
+        2026 — Desenvolvido por 
+        <a href="https://www.renattoux.dev" 
+           class="text-gray-500 hover:underline" 
+           target="_blank" 
+           rel="noopener noreferrer">
+           RenattoUXD
+        </a>.
+    </p>
+
+</footer>
+
+
+</body>
+</html>

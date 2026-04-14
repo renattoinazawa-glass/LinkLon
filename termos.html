@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkLon</title>
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Plus+Jakarta+Sans:wght@400;800&family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #030305;
+            color: #ffffff;
+        }
+
+        /* Neon Glow Utility */
+        .neon-text {
+            text-shadow: 0 0 20px rgba(0, 230, 0, 0.4);
+        }
+
+        /* Glassmorphism Utility */
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+
+
+
+</style>
+
+</head>
+
+<body>
+<nav class="fixed top-0 w-full z-50 px-6 py-6 flex justify-between items-center glass">
+    <div class="flex items-center">
+        <a href="index.html" class="text-white font-bold text-xl transition">LinkLon</a>
+    </div>
+
+    <div class="hidden md:flex gap-8 text-sm font-medium text-gray-400">
+         <a href="index.html" class="hover:text-white transition">Inicio</a>
+        <a href="Politicas.html" class="hover:text-white transition">Política</a>
+        <a href="#contato" class="hover:text-white transition">Contato</a>
+    </div>
+
+    <button id="menu-btn" class="md:hidden text-gray-400 hover:text-white focus:outline-none">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+    </button>
+
+    <div id="mobile-menu" class="hidden fixed inset-0 z-[9999] w-screen h-screen bg-[#030305]">
+    
+    <button id="close-btn" class="absolute top-8 right-8 text-white z-[10000] p-2">
+        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+    </button>
+    
+    <div class="flex flex-col items-center justify-center w-full h-full px-6">
+        <nav class="flex flex-col items-center gap-12 w-full">
+             <a href="index.html" class="mobile-link text-3xl font-bold text-white uppercase tracking-widest whitespace-nowrap">Inicio</a>
+            <a href="Politicas.html" class="mobile-link text-3xl font-bold text-white uppercase tracking-widest whitespace-nowrap">
+                Política
+            </a>
+           
+            <a href="#contato" class="mobile-link text-3xl font-bold text-white uppercase tracking-widest whitespace-nowrap">
+                Contato
+            </a>
+        </nav>
+    </div>
+</div>
+</nav>
+<script>
+    const menuBtn = document.getElementById('menu-btn');
+    const closeBtn = document.getElementById('close-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    // Abre o menu
+    menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.remove('hidden');
+        menuBtn.classList.add('hidden'); // Esconde o ícone de hambúrguer
+    });
+
+    // Fecha o menu
+    closeBtn.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuBtn.classList.remove('hidden'); // Traz o ícone de hambúrguer de volta
+    });
+
+    // Fecha o menu ao clicar nos links
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            menuBtn.classList.remove('hidden'); // Traz o ícone de hambúrguer de volta
+        });
+    });
+</script>
+
+<main>
+<div class="mt-24 max-w-md mx-auto text-left">
+<b>Termos de Uso — LinkLon</b><br><br>
+
+<b>Última atualização:</b> 2026<br><br>
+
+Bem-vindo ao site LinkLon. Ao acessar e utilizar este website, você concorda com os presentes Termos de Uso. Caso não concorde com qualquer parte destes termos, recomendamos que não utilize o site.<br><br>
+
+<b>1. Sobre o uso do site</b><br><br>
+O site LinkLon tem caráter informativo e comercial, com o objetivo de apresentar serviços e permitir que usuários entrem em contato com o responsável.<br><br>
+O usuário se compromete a utilizar o site de forma lícita, respeitando a legislação vigente, a moral e a ordem pública.<br><br>
+
+<b>2. Propriedade intelectual</b><br><br>
+Todo o conteúdo presente neste site, incluindo textos, imagens, logotipos, identidade visual e demais elementos, é de propriedade exclusiva de LinkLon, salvo quando indicado o contrário.<br><br>
+É proibida a reprodução, distribuição ou modificação de qualquer conteúdo sem autorização prévia e expressa.<br><br>
+
+<b>3. Contato e comunicação</b><br><br>
+O site disponibiliza meios de contato para que o usuário possa se comunicar com o responsável.<br><br>
+Ao entrar em contato, o usuário concorda que poderá receber respostas por meio dos canais informados.<br><br>
+O envio de mensagens não estabelece qualquer vínculo contratual automático entre as partes.<br><br>
+
+<b>4. Limitação de responsabilidade</b><br><br>
+O LinkLon se esforça para manter as informações do site atualizadas e corretas, porém não garante a ausência de erros, falhas ou interrupções.<br><br>
+O uso das informações disponibilizadas é de responsabilidade exclusiva do usuário.<br><br>
+O LinkLon não se responsabiliza por danos diretos ou indiretos decorrentes do uso ou da incapacidade de uso do site.<br><br>
+
+<b>5. Links para terceiros</b><br><br>
+Este site pode conter links para websites de terceiros. O LinkLon não se responsabiliza pelo conteúdo, políticas ou práticas desses sites.<br><br>
+
+<b>6. Privacidade e cookies</b><br><br>
+O uso de dados pessoais e cookies é regido pela Política de Privacidade do site.<br><br>
+Recomendamos a leitura da Política de Privacidade para compreender como seus dados são tratados.<br><br>
+
+<b>7. Alterações destes termos</b><br><br>
+O LinkLon poderá atualizar estes Termos de Uso a qualquer momento, sem aviso prévio.<br><br>
+Recomendamos que o usuário revise este documento periodicamente.<br><br>
+
+<b>8. Legislação aplicável</b><br><br>
+Estes Termos de Uso são regidos pelas leis da República Federativa do Brasil, em especial a Lei Geral de Proteção de Dados (LGPD).<br><br>
+
+<b>9. Contato</b><br><br>
+Para dúvidas sobre estes Termos de Uso, o usuário poderá entrar em contato pelos meios disponibilizados no site.<br><br>
+</div>
+</main>
+
+<footer class="py-10 text-center text-gray-600 text-sm border-t border-white/5">
+
+    <nav class="mb-4 flex justify-center gap-6 text-gray-500">
+        <a href="Politicas.html" class="hover:text-white transition">Política de Privacidade</a>
+        <a href="index.html" class="hover:text-white transition">Inicio</a>
+    </nav>
+
+    <p>
+        2026 — Desenvolvido por 
+        <a href="https://www.renattoux.dev" 
+           class="text-gray-500 hover:underline" 
+           target="_blank" 
+           rel="noopener noreferrer">
+           RenattoUXD
+        </a>.
+    </p>
+    </footer>
+
+</body>
