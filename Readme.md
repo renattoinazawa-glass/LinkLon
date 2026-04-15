@@ -1,4 +1,4 @@
-# LinkLon - Agência de Performance e Web Design
+## LinkLon - Agência de Performance e Web Design
 
 Este é o repositório da Landing Page oficial da **LinkLon**, focada em gestão estratégica de tráfego pago (Meta Ads e Google Ads) e desenvolvimento web de alta conversão.
 
