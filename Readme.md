@@ -17,3 +17,6 @@ Este é o repositório da Landing Page oficial da **LinkLon**, focada em gestão
 1. Clone o repositório:
    ```bash
    git clone [https://github.com/seu-usuario/nome-do-repositorio.git](https://github.com/seu-usuario/nome-do-repositorio.git)
+
+## Updates:
+Optimização do hero banner e do favicon, com alteração no HTML para refletir as mudanças 15/04
